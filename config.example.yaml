@@ -1,0 +1,35 @@
+# Copy to config.yaml and fill in your own values.
+# All numbers below are example defaults, not real values.
+# Never commit a real password, key, token or account id.
+grades:
+  P0: daily use
+  P1: model lanes
+  P2: daily check-in stations
+  P3: cloud machines
+  P4: do not connect yet
+items:
+  - name: example-mail
+    grade: P0
+    kind: oauth
+    method: connect-link
+    verify: status
+  - name: example-model-lane
+    grade: P1
+    kind: api-key
+    method: rebuild-at-console
+    verify: models
+  - name: example-checkin-station
+    grade: P2
+    kind: system-token
+    method: rebuild-at-console
+    verify: status
+  - name: example-cloud-machine
+    grade: P3
+    kind: ssh-key
+    method: reuse-bound-key
+    verify: status
+  - name: example-blocked-service
+    grade: P4
+    kind: api-key
+    method: do-not-connect
+    verify: none
